@@ -19,17 +19,24 @@ body {
 nav {
   padding: 5px 10px;
   background-color: #eee;
-  text-align: right;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav ul li + li {
+  border-left: 1px solid #aaa;
 }
 
 nav a {
-  display: inline-block;
   text-decoration: none;
   padding: 0 5px;
-}
-
-nav a + a {
-  border-left: 1px solid #aaa;
 }
 
 nav a img {
@@ -125,15 +132,18 @@ header .menu a.active {
 /* 課程介紹
 -------------------------------------------------- */
 .course {
+  margin: 50px 0;
+}
+
+.course ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 50px 0;
 }
 
-.course .course-item {
+.course ul li {
   width: 360px;
   padding: 20px;
   -webkit-box-sizing: border-box;
@@ -142,17 +152,17 @@ header .menu a.active {
           box-shadow: 0 3px 3px 1px #ddd;
 }
 
-.course .course-item img {
+.course ul li img {
   width: 100%;
 }
 
-.course .course-item h2 {
+.course ul li h2 {
   font-size: 1.5em;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.course .course-item p {
+.course ul li p {
   letter-spacing: 2px;
   line-height: 1.5;
 }
@@ -226,16 +236,16 @@ header .menu a.active {
   padding: 10px 15px;
 }
 
-.message-board form .message {
+.message-board .message {
   width: 50%;
 }
 
-.message-board form .message textarea {
+.message-board .message textarea {
   width: 85%;
   resize: none;
 }
 
-.message-board form .contact {
+.message-board .contact {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,7 +259,7 @@ header .menu a.active {
           justify-content: space-between;
 }
 
-.message-board form .contact .contact-item {
+.message-board .contact .contact-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,16 +269,20 @@ header .menu a.active {
           flex-direction: column;
 }
 
-.message-board form .contact .contact-item label {
+.message-board .contact .contact-item label {
   margin-bottom: 5px;
 }
 
-.message-board form .contact .contact-item button {
+.message-board .contact .contact-item button {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 6px 22px;
   background-color: #00cc99;
   color: #fff;
+}
+
+.message-board .contact .contact-item button:hover {
+  cursor: pointer;
 }
 
 /* 頁尾
